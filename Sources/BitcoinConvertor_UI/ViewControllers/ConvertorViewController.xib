@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConvertorViewController" customModuleProvider="target">
+            <connections>
+                <outlet property="dateTimeLabel" destination="dgG-SR-KJQ" id="TKA-bR-7l9"/>
+                <outlet property="inputLabel" destination="vEy-5c-LWM" id="TX0-Bv-tcU"/>
+                <outlet property="outputLabel" destination="5L2-5J-gpl" id="cm4-Bh-KWn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="MainView" customModule="Theme">
+            <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6z-Mu-x9b" userLabel="DisplayView">
+                    <rect key="frame" x="44" y="7" width="838" height="96.666666666666671"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgG-SR-KJQ" customClass="SubDisplayLabel" customModule="Theme">
+                            <rect key="frame" x="818" y="16.666666666666657" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bTG-cz-vi1" userLabel="Display Stack View">
+                            <rect key="frame" x="20" y="16.666666666666657" width="798" height="80"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41J-Sd-cU1" customClass="SecondView" customModule="Theme">
+                                    <rect key="frame" x="0.0" y="0.0" width="798" height="35"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pGx-sb-cbi">
+                                            <rect key="frame" x="0.0" y="-0.6666666666666714" width="40" height="37"/>
+                                            <color key="tintColor" systemColor="systemFillColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="Ejn-dN-sWW"/>
+                                                <constraint firstAttribute="width" secondItem="pGx-sb-cbi" secondAttribute="height" multiplier="1:1" id="tuV-Oy-mDL"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L2-5J-gpl" customClass="DisplayLabel" customModule="Theme">
+                                            <rect key="frame" x="50" y="-1" width="748" height="37"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="pGx-sb-cbi" firstAttribute="centerY" secondItem="41J-Sd-cU1" secondAttribute="centerY" id="M8o-s6-XM1"/>
+                                        <constraint firstItem="5L2-5J-gpl" firstAttribute="centerY" secondItem="41J-Sd-cU1" secondAttribute="centerY" id="OYs-SD-BP1"/>
+                                        <constraint firstAttribute="trailing" secondItem="5L2-5J-gpl" secondAttribute="trailing" id="UU3-DY-0Qh"/>
+                                        <constraint firstItem="pGx-sb-cbi" firstAttribute="leading" secondItem="41J-Sd-cU1" secondAttribute="leading" id="aGb-HQ-8kw"/>
+                                        <constraint firstItem="5L2-5J-gpl" firstAttribute="leading" secondItem="pGx-sb-cbi" secondAttribute="trailing" constant="10" id="apd-lP-t1N"/>
+                                        <constraint firstAttribute="height" constant="60" id="lvO-nl-qj6">
+                                            <variation key="heightClass=compact-widthClass=compact" constant="35"/>
+                                            <variation key="heightClass=compact-widthClass=regular" constant="35"/>
+                                        </constraint>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <integer key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OcA-0L-EDr" customClass="SecondView" customModule="Theme">
+                                    <rect key="frame" x="0.0" y="45" width="798" height="35"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoinsign.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="c78-NZ-LQ3">
+                                            <rect key="frame" x="0.0" y="-0.66666666666667851" width="40" height="37"/>
+                                            <color key="tintColor" systemColor="systemFillColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="c78-NZ-LQ3" secondAttribute="height" multiplier="1:1" id="Def-G0-wzi"/>
+                                                <constraint firstAttribute="width" constant="40" id="HX6-nY-gHy"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEy-5c-LWM" customClass="DisplayLabel" customModule="Theme">
+                                            <rect key="frame" x="50" y="-1" width="748" height="37"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="vEy-5c-LWM" firstAttribute="leading" secondItem="c78-NZ-LQ3" secondAttribute="trailing" constant="10" id="SJN-pF-oDJ"/>
+                                        <constraint firstItem="vEy-5c-LWM" firstAttribute="centerY" secondItem="OcA-0L-EDr" secondAttribute="centerY" id="dsv-fb-YqR"/>
+                                        <constraint firstAttribute="trailing" secondItem="vEy-5c-LWM" secondAttribute="trailing" id="gyy-F7-Hj6"/>
+                                        <constraint firstItem="c78-NZ-LQ3" firstAttribute="centerY" secondItem="OcA-0L-EDr" secondAttribute="centerY" id="oKP-Ky-ntv"/>
+                                        <constraint firstAttribute="height" constant="60" id="u4G-XI-Xvz">
+                                            <variation key="heightClass=compact-widthClass=compact" constant="35"/>
+                                            <variation key="heightClass=compact-widthClass=regular" constant="35"/>
+                                        </constraint>
+                                        <constraint firstItem="c78-NZ-LQ3" firstAttribute="leading" secondItem="OcA-0L-EDr" secondAttribute="leading" id="u9n-N1-gXe"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <integer key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="41J-Sd-cU1" firstAttribute="leading" secondItem="bTG-cz-vi1" secondAttribute="leading" id="mSZ-ZR-Ij4"/>
+                                <constraint firstAttribute="trailing" secondItem="41J-Sd-cU1" secondAttribute="trailing" id="oNJ-AD-caf"/>
+                            </constraints>
+                            <variation key="heightClass=compact-widthClass=compact" spacing="5"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="bTG-cz-vi1" secondAttribute="trailing" constant="20" id="Gnl-Sb-9RE"/>
+                        <constraint firstItem="bTG-cz-vi1" firstAttribute="top" secondItem="dgG-SR-KJQ" secondAttribute="bottom" id="P4V-cj-vcn"/>
+                        <constraint firstItem="bTG-cz-vi1" firstAttribute="leading" secondItem="Y6z-Mu-x9b" secondAttribute="leading" constant="20" id="UfH-E0-XYC"/>
+                        <constraint firstAttribute="bottom" secondItem="bTG-cz-vi1" secondAttribute="bottom" id="hDe-Hw-0wL"/>
+                        <constraint firstItem="dgG-SR-KJQ" firstAttribute="trailing" secondItem="bTG-cz-vi1" secondAttribute="trailing" id="kmo-um-ieu"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcq-L7-OmB" userLabel="KeyPadView">
+                    <rect key="frame" x="64" y="103.66666666666666" width="798" height="303.33333333333337"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="JAz-Iq-K2K" userLabel="Buttons">
+                            <rect key="frame" x="0.0" y="20" width="798" height="273.33333333333331"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="56G-J3-GmW" userLabel="Convertor Buttons">
+                                    <rect key="frame" x="0.0" y="0.0" width="798" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVe-aC-Bq7" customClass="DarkButton" customModule="Theme">
+                                            <rect key="frame" x="0.0" y="0.0" width="798" height="50"/>
+                                            <color key="backgroundColor" red="0.64317065480000002" green="0.64700299500000003" blue="0.65098696950000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <state key="normal" title="Get ₿ Price">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="convertButtonTapped" destination="-1" eventType="touchUpInside" id="QnP-wl-6P9"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-gp-4K4" userLabel="Second Row">
+                                    <rect key="frame" x="0.0" y="55.999999999999986" width="798" height="49.666666666666671"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6R-4m-F3v" customClass="DigitButton" customModule="Theme">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="49.666666666666664"/>
+                                            <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <state key="normal" title="1">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="digitButtonTapped:" destination="-1" eventType="touchUpInside" id="OaI-lA-3aQ"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pK-fo-Oe4" customClass="DigitButton" customModule="Theme">
+                                            <rect key="frame" x="270" y="0.0" width="258" height="49.666666666666664"/>
+                                            <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <state key="normal" title="2">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="digitButtonTapped:" destination="-1" eventType="touchUpInside" id="DFg-cN-X5x"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0C4-Eg-fBC" customClass="DigitButton" customModule="Theme">
+                                            <rect key="frame" x="540" y="0.0" width="258" height="49.666666666666664"/>
+                                            <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <state key="normal" title="3">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="digitButtonTapped:" destination="-1" eventType="touchUpInside" id="Umw-6w-6ch"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="6DV-1j-il2" userLabel="Third Row">
+                                    <rect key="frame" x="0.0" y="111.66666666666669" width="798" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEQ-c2-Es4" customClass="DigitButton" customModule="Theme">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="50"/>
+                                            <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <state key="normal" title="4">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="digitButtonTapped:" destination="-1" eventType="touchUpInside" id="e9W-Ih-IV8"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTr-XO-jxz" customClass="DigitButton" customModule="Theme">
+                                            <rect key="frame" x="270" y="0.0" width="258" height="50"/>
+                                            <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <state key="normal" title="5">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="digitButtonTapped:" destination="-1" eventType="touchUpInside" id="fm5-9V-5NS"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tER-Y2-fEl" customClass="DigitButton" customModule="Theme">
+                                            <rect key="frame" x="540" y="0.0" width="258" height="50"/>
+                                            <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <state key="normal" title="6">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="digitButtonTapped:" destination="-1" eventType="touchUpInside" id="ylc-5d-A6A"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="mJA-f9-MJ0" userLabel="Fourth Row">
+                                    <rect key="frame" x="0.0" y="167.66666666666663" width="798" height="49.666666666666657"/>
+                                    <subviews>
+                                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phg-MP-TtN" customClass="DigitButton" customModule="Theme">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="49.666666666666664"/>
+                                            <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                            <state key="normal" title="7">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="digitButtonTapped:" destination="-1" eventType="touchUpInside" id="qES-fx-jBy"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmX-NP-nLn" customClass="DigitButton" customModule="Theme">
+                                            <rect key="frame" x="270" y="0.0" width="258" height="49.666666666666664"/>
+                                            <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                            <state key="normal" title="8">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="digitButtonTapped:" destination="-1" eventType="touchUpInside" id="InK-5k-LGB"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hyn-PT-XQg" customClass="DigitButton" customModule="Theme">
+                                            <rect key="frame" x="540" y="0.0" width="258" height="49.666666666666664"/>
+                                            <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                            <state key="normal" title="9">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="digitButtonTapped:" destination="-1" eventType="touchUpInside" id="JVY-2f-iqk"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="P5r-by-2ta" userLabel="Fifth Row">
+                                    <rect key="frame" x="0.0" y="223.33333333333331" width="798" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVy-8y-prf" customClass="DigitButton" customModule="Theme">
+                                            <rect key="frame" x="0.0" y="0.0" width="258" height="50"/>
+                                            <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                            <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <state key="normal" title="0">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="digitButtonTapped:" destination="-1" eventType="touchUpInside" id="yf2-Et-pXq"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBi-c6-JJx" customClass="DigitButton" customModule="Theme">
+                                            <rect key="frame" x="270" y="0.0" width="258" height="50"/>
+                                            <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                            <state key="normal" title=".">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="digitButtonTapped:" destination="-1" eventType="touchUpInside" id="acv-Tt-3Ra"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8k-ir-n4T" customClass="DigitButton" customModule="Theme">
+                                            <rect key="frame" x="540" y="0.0" width="258" height="50"/>
+                                            <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <state key="normal" image="clear" catalog="system">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="clearButtonTapped:" destination="-1" eventType="touchUpInside" id="wTU-d0-XSu"/>
+                                                <action selector="digitButtonTapped:" destination="-1" eventType="touchUpInside" id="VQ6-P8-goK"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <variation key="heightClass=compact-widthClass=regular" spacing="6"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="JAz-Iq-K2K" secondAttribute="trailing" id="3DG-4W-XgT"/>
+                        <constraint firstItem="JAz-Iq-K2K" firstAttribute="top" secondItem="Wcq-L7-OmB" secondAttribute="top" constant="20" symbolic="YES" id="Yp4-PS-EJe"/>
+                        <constraint firstAttribute="bottom" secondItem="JAz-Iq-K2K" secondAttribute="bottom" constant="10" id="fF2-yE-PsQ"/>
+                        <constraint firstItem="JAz-Iq-K2K" firstAttribute="leading" secondItem="Wcq-L7-OmB" secondAttribute="leading" id="lVR-Mv-0W6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Y6z-Mu-x9b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7Oz-xL-G0v"/>
+                <constraint firstItem="Wcq-L7-OmB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="9ra-d7-R2c"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Wcq-L7-OmB" secondAttribute="trailing" constant="20" id="Qy3-QF-ev8"/>
+                <constraint firstItem="Y6z-Mu-x9b" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="7" id="T0f-Ee-AUe"/>
+                <constraint firstItem="Wcq-L7-OmB" firstAttribute="height" secondItem="Y6z-Mu-x9b" secondAttribute="height" multiplier="2" id="Zq8-Zm-TIx">
+                    <variation key="heightClass=compact-widthClass=compact" constant="110"/>
+                    <variation key="heightClass=compact-widthClass=regular" constant="110"/>
+                    <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="Wcq-L7-OmB" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="csF-lc-Eo9"/>
+                <constraint firstItem="Wcq-L7-OmB" firstAttribute="top" secondItem="Y6z-Mu-x9b" secondAttribute="bottom" id="lb5-uC-h1F"/>
+                <constraint firstItem="Y6z-Mu-x9b" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="xZY-S5-ocU"/>
+            </constraints>
+            <point key="canvasLocation" x="135.98130841121494" y="110.15118790496761"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bitcoinsign.square" catalog="system" width="128" height="114"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
+        <image name="dollarsign.square" catalog="system" width="128" height="114"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
